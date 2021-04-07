@@ -4,6 +4,18 @@ import Game from './game.js'
 // console.log(game);
 let game = undefined;
 
+function updateUI(){
+  let board = document.getElementById('board-holder');
+  if(game !== undefined) {
+    board.classList.remove('is-invisible');
+    let gameName = document.getElementById('game-name');
+    gameName.innerHTML = game.getName();
+  }
+  else {
+    board.classList.add('is-invisible');
+  }
+};
+
 window.addEventListener("DOMContentLoaded", event => {
 
   let playOneInput = document.getElementById('player-1-name');
@@ -34,8 +46,12 @@ window.addEventListener("DOMContentLoaded", event => {
   })
   
   newGameButton.addEventListener('click', event=>{
-      const game = new Game(playOneInput.value, playTwoInput.value)
-      console.log(game)
+      game = new Game(playOneInput.value, playTwoInput.value);
+      playOneInput.value = '';
+      playTwoInput.value = '';
+      newGameButton.disabled = true;
+      updateUI();
+
   })
 
 })
