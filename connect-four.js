@@ -22,6 +22,13 @@ window.addEventListener("DOMContentLoaded", event => {
   let playTwoInput = document.getElementById('player-2-name');
   let newGameButton = document.getElementById('new-game');
 
+  let targets = document.getElementById('click-targets');
+  targets.addEventListener('click', event=>{
+    game.playInColumn()
+    updateUI();
+  })
+
+
 
     function checkForBothPlayers(){
         //checks if player one and play two input is null
