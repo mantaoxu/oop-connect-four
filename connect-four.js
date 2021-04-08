@@ -2,7 +2,6 @@ import Game from "./game.js";
 import Column from './column.js';
 let game = undefined;
 
-
 //updates the User Interface
 function updateUI(){
   let targets = document.getElementById('click-targets');

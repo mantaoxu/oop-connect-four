@@ -6,7 +6,15 @@ class Game{
         this.playerOne = playerOne;//PeterM
         this.playerTwo = playerTwo  //Doris
         this.currentPlayer = currentPlayer //1 
-        this.columns = [new Column(), new Column(), new Column(), new Column(), new Column(), new Column(), new Column()];
+        this.columns = [
+                            new Column(), 
+                            new Column(), 
+                            new Column(), 
+                            new Column(), 
+                            new Column(), 
+                            new Column(), 
+                            new Column()
+                        ];
 
     }
     getName(){
@@ -16,7 +24,7 @@ class Game{
     //could also be named changePlayer()
     playInColumn(columnIndex){
         let column = this.columns[columnIndex];
-        // column.add
+        column.add(this.currentPlayer);
 
 
         if (this.currentPlayer === 1){
