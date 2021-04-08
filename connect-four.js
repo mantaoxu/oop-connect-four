@@ -1,4 +1,4 @@
-import Game from './game.js'
+import Game from "./game.js";
 
 let game = undefined;
 
@@ -21,12 +21,7 @@ function updateUI(){
     }
 
   }
-  else {
-    board.classList.add('is-invisible');
-  }
-};
-
-window.addEventListener("DOMContentLoaded", event => {
+}
 
   let playOneInput = document.getElementById('player-1-name');
   let playTwoInput = document.getElementById('player-2-name');
@@ -51,10 +46,11 @@ window.addEventListener("DOMContentLoaded", event => {
             newGameButton.disabled = true;
         }
     }
+  }
 
-  playOneInput.addEventListener('keyup', event => {
-    checkForBothPlayers()
-  })
+  playOneInput.addEventListener("keyup", (event) => {
+    checkForBothPlayers();
+  });
 
   playTwoInput.addEventListener('keyup', event => {
     checkForBothPlayers()
