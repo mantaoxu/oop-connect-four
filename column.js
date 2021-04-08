@@ -1,4 +1,4 @@
-export default class Column {
+class Column {
   constructor(){
     this.tokens = [];
     //6 undefined
@@ -36,3 +36,4 @@ export default class Column {
   }
   
 }
+export default Column;
