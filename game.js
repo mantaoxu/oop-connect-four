@@ -24,6 +24,7 @@ class Game{
     //could also be named changePlayer()
     playInColumn(columnIndex){
         let column = this.columns[columnIndex];
+        console.log(column);
         column.add(this.currentPlayer);
 
 

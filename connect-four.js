@@ -18,7 +18,11 @@ function updateUI(){
       targets.classList.add('black')
       targets.classList.remove('red')
     }
-
+    for (let i = 0; i < this.column.length; i++) {
+      for (let j = 0; j < this.column[i].length; j++){
+        
+      }
+    }
   }
 }
   window.addEventListener('DOMContentLoaded', event => { 
@@ -28,7 +32,10 @@ function updateUI(){
   let targets = document.getElementById('click-targets');
 
   targets.addEventListener('click', event=>{
-    game.playInColumn() //this will switch the current play in this.currentPlayer
+    console.log(event.target.id);
+    let column = event.target.id.slice(-1);
+    console.log(column);
+    game.playInColumn(column) //this will switch the current play in this.currentPlayer
     updateUI();
   })
 
