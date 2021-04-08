@@ -1,5 +1,5 @@
 import Game from "./game.js";
-
+import Column from './column.js';
 let game = undefined;
 
 
@@ -22,7 +22,7 @@ function updateUI(){
 
   }
 }
-
+  window.addEventListener('DOMContentLoaded', event => { 
   let playOneInput = document.getElementById('player-1-name');
   let playTwoInput = document.getElementById('player-2-name');
   let newGameButton = document.getElementById('new-game');
@@ -46,7 +46,7 @@ function updateUI(){
             newGameButton.disabled = true;
         }
     }
-  }
+  
 
   playOneInput.addEventListener("keyup", (event) => {
     checkForBothPlayers();
